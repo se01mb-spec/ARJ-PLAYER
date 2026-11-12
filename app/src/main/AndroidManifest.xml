@@ -5,7 +5,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <application android:name=".ArjPlayerApp" android:allowBackup="true" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.ArjPlayer">
+    <application android:name=".ArjPlayerApp" android:allowBackup="true" android:icon="@drawable/ic_launcher_vinyl"
+        android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.ArjPlayer">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
         </activity>
