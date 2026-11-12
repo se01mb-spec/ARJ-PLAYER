@@ -1,8 +1,8 @@
-
 <resources>
-    <string name="app_name">پخش‌کننده موزیک آرج</string>
+    <string name="app_name">ARJ Player</string>
     <string name="now_playing">در حال پخش</string>
     <string name="playlist">لیست پخش</string>
     <string name="equalizer">اکولایزر</string>
     <string name="settings">تنظیمات</string>
+    <string name="created_by">ساخته شده توسط علیرضا ارجمند نیا</string>
 </resources>

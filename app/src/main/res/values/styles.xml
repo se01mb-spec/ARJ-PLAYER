@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.ArjPlayer" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#EDAE49</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#003D5B</item>
+        <item name="android:navigationBarColor">#003D5B</item>
+    </style>
+</resources>
