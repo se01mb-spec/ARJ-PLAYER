@@ -1,19 +1,19 @@
 package com.honey.music.player
 
-import android.app.Service
-import android.content.Intent
-import android.os.IBinder
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.session.MediaSession
+import androidx.media3.session.MediaSessionService
 
-/**
- * Playback service entry point.
- *
- * The player engine will be connected here as the playback layer is completed.
- * Keep the service contract valid for Android while the app is being assembled.
- */
-class MusicPlaybackService : Service() {
-    override fun onBind(intent: Intent?): IBinder? = null
-
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        return START_STICKY
+class MusicPlaybackService : MediaSessionService() {
+    private var session: MediaSession? = null
+    override fun onCreate() {
+        super.onCreate()
+        session = MediaSession.Builder(this, ExoPlayer.Builder(this).build()).build()
+    }
+    override fun onGetSession(controllerInfo: MediaSession.ControllerInfo): MediaSession? = session
+    override fun onDestroy() {
+        session?.run { player.release(); release() }
+        session = null
+        super.onDestroy()
     }
 }
